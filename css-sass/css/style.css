@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css?family=Pangolin");
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,700");
+.articulo, .presentacion article, .tarjeta p {
+  font-size: 14px;
+  text-align: justify;
+}
+
+.reset, body, #titulo #titulo-contenido h1, #titulo #titulo-contenido h2, #telefono h1, #telefono h2, .menu ul, .presentacion h1, .presentacion h2, .presentacion article {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  background-color: #fff3e0;
+  border-top: 5px solid #e91e63;
+}
+
+.contenedor {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 992px) {
+  .contenedor {
+    max-width: 960px;
+  }
+}
+
+.fila {
+  display: flex;
+}
+
+.columna-3 {
+  -ms-flex: 25%;
+  flex: 25%;
+  width: 25%;
+}
+
+.columna-4 {
+  -ms-flex: 33.33333%;
+  flex: 33.33333%;
+  width: 33.33333%;
+}
+
+.columna-8 {
+  -ms-flex: 66.66667%;
+  flex: 66.66667%;
+  width: 66.66667%;
+}
+
+/** titulo **/
+#titulo {
+  margin: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#titulo img {
+  float: left;
+  width: 100px;
+}
+
+#titulo #titulo-contenido {
+  float: left;
+}
+
+#titulo #titulo-contenido h1 {
+  color: #e91e63;
+  font-size: 36px;
+  font-family: 'Great Vibes', cursive;
+}
+
+#titulo #titulo-contenido h2 {
+  color: #F06292;
+  font-size: 16px;
+  font-family: 'Pangolin', cursive;
+  font-weight: normal;
+}
+
+/** slogan **/
+#slogan {
+  margin: 10px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #F06292;
+  font-family: 'Pangolin', cursive;
+}
+
+/** telefono **/
+#telefono {
+  margin: 10px;
+  margin-top: 0;
+  margin-left: 30px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#telefono h1 {
+  padding: 10px 0 10px 0;
+  text-align: center;
+  color: #ffffff;
+  background-color: #e91e63;
+  font-size: 16px;
+}
+
+#telefono h2 {
+  padding: 10px 0 10px 0;
+  text-align: center;
+  font-size: 26px;
+  color: #e91e63;
+  background-color: #ffd54f;
+  border-right: 3px solid #d81b60;
+  border-left: 3px solid #d81b60;
+  border-bottom: 3px solid #d81b60;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/** menu **/
+.menu {
+  font-family: "Ubuntu", sans-serif;
+  margin: 10px;
+}
+
+.menu ul {
+  list-style: none;
+  text-align: center;
+  display: flex;
+}
+
+.menu ul li {
+  -ms-flex: 25%;
+  flex: 25%;
+  width: 25%;
+}
+
+.menu ul li a {
+  padding: 12px 0 12px 0;
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #F06292;
+  color: #ffffff;
+  transition: 0.2s ease-in-out all;
+  border-right: 1px solid #e85a8a;
+}
+
+.menu ul li a:hover {
+  background-color: #e91e63;
+}
+
+.menu ul li:first-child a {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.menu ul li:last-child a {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-right: none;
+}
+
+/** presentacion **/
+.presentacion {
+  margin: 10px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.presentacion h1 {
+  padding: 10px 0 10px 0;
+  text-align: center;
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #e91e63;
+  border-right: 3px solid #d81b60;
+  border-left: 3px solid #d81b60;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.presentacion h2 {
+  padding: 10px 0 10px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #e91e63;
+  background-color: #ffd54f;
+  border-right: 3px solid #ffe082;
+  border-left: 3px solid #ffe082;
+}
+
+.presentacion article {
+  padding: 10px;
+  background-color: #ffffff;
+  border-right: 3px solid #CFD8DC;
+  border-left: 3px solid #CFD8DC;
+  border-bottom: 3px solid #CFD8DC;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/** banner **/
+.banner {
+  margin: 10px;
+}
+
+.banner img {
+  border-radius: 5px;
+  width: 100%;
+  max-height: 352px;
+}
+
+/** tarjeta **/
+.tarjeta {
+  margin: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+  font-family: "Ubuntu", sans-serif;
+  border: 3px solid #CFD8DC;
+  border-radius: 5px;
+}
+
+.tarjeta img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.tarjeta h1 {
+  font-size: 16px;
+  color: #0D47A1;
+  font-weight: bold;
+}
+
+.tarjeta p {
+  color: #000000;
+}
+
+.tarjeta a {
+  display: block;
+  padding: 10px 0 10px 0;
+  background-color: #e91e63;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out all;
+}
+
+.tarjeta a:hover {
+  background-color: #F06292;
+}
+/*# sourceMappingURL=style.css.map */

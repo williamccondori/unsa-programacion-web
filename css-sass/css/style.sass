@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Pangolin')
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes')
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700')
+
+$color-primario: #e91e63
+$color-secundario: #ffd54f
+$color-acento: #F06292
+$color-fondo: #fff3e0
+$color-texto-primario: #000000
+$color-texto-secundario: #ffffff
+
+$total-porcentaje: 100%
+$total-flex: 1
+
+$fuente-principal: 'Ubuntu'
+
+=columna($tamanio)
+    -ms-flex: $total-flex / $tamanio * $total-porcentaje
+    flex: $total-flex / $tamanio * $total-porcentaje
+    width: $total-flex / $tamanio  * $total-porcentaje
+
+=borde-redondeado($tamanio)
+    border-radius: $tamanio
+
+.articulo
+    font-size: 14px
+    text-align: justify
+
+.reset
+    margin: 0
+    padding: 0
+
+body
+    width: $total-porcentaje
+    @extend .reset
+    background-color: $color-fondo
+    border-top: 5px solid $color-primario
+
+.contenedor
+    width: $total-porcentaje
+    margin-right: auto
+    margin-left: auto
+
+@media (min-width: 992px)
+    .contenedor 
+        max-width: 960px
+
+.fila
+    display: flex
+
+.columna-3
+    +columna(4)
+
+.columna-4
+    +columna(3)
+
+.columna-8
+    +columna(1.5)
+
+/** titulo **/
+#titulo
+    margin: 10px
+    margin-top: 20px
+    text-align: center
+    img
+        float: left
+        width: 100px
+    #titulo-contenido
+        float: left
+        h1
+            @extend .reset
+            color: $color-primario
+            font-size: 36px
+            font-family: 'Great Vibes', cursive
+        h2
+            @extend .reset
+            color: $color-acento
+            font-size: 16px
+            font-family: 'Pangolin', cursive
+            font-weight: normal
+
+/** slogan **/
+
+#slogan
+    margin: 10px
+    margin-top: 20px
+    text-align: center
+    font-size: 16px
+    color: $color-acento
+    font-family: 'Pangolin', cursive
+
+/** telefono **/
+#telefono
+    margin: 10px
+    margin-top: 0
+    margin-left: 30px
+    font-family: $fuente-principal, sans-serif
+    h1
+        @extend .reset
+        padding: 10px 0 10px 0
+        text-align: center
+        color: $color-texto-secundario
+        background-color: $color-primario
+        font-size: 16px
+    h2
+        @extend .reset
+        padding: 10px 0 10px 0
+        text-align: center
+        font-size: 26px
+        color: $color-primario
+        background-color: $color-secundario
+        border-right: 3px solid #d81b60
+        border-left: 3px solid #d81b60
+        border-bottom: 3px solid #d81b60
+        border-bottom-left-radius: 5px
+        border-bottom-right-radius: 5px
+
+/** menu **/
+
+.menu
+    font-family: $fuente-principal, sans-serif
+    margin: 10px
+    ul
+        @extend .reset
+        list-style: none
+        text-align: center
+        display: flex
+        li
+            +columna(4)
+            a
+                padding: 12px 0 12px 0
+                display: block
+                font-weight: bold
+                font-size: 14px
+                text-decoration: none
+                background-color: $color-acento
+                color: $color-texto-secundario
+                transition: 0.2s ease-in-out all
+                border-right: 1px solid #e85a8a
+            a:hover
+                background-color: $color-primario
+        li:first-child 
+            a
+                border-top-left-radius: 5px
+                border-bottom-left-radius: 5px
+        li:last-child 
+            a                
+                border-top-right-radius: 5px
+                border-bottom-right-radius: 5px
+                border-right: none
+
+/** presentacion **/
+
+.presentacion
+    margin: 10px
+    font-family: $fuente-principal, sans-serif
+    h1
+        @extend .reset
+        padding: 10px 0 10px 0
+        text-align: center
+        font-size: 24px
+        color: $color-texto-secundario
+        background-color: $color-primario
+        border-right: 3px solid #d81b60
+        border-left: 3px solid #d81b60
+        border-top-left-radius: 5px
+        border-top-right-radius: 5px
+    h2
+        @extend .reset
+        padding: 10px 0 10px 0
+        text-align: center
+        font-size: 16px
+        color: $color-primario
+        background-color: $color-secundario
+        border-right: 3px solid #ffe082
+        border-left: 3px solid #ffe082
+    article
+        @extend .reset
+        @extend .articulo
+        padding: 10px
+        background-color: #ffffff
+        border-right: 3px solid #CFD8DC
+        border-left: 3px solid #CFD8DC
+        border-bottom: 3px solid #CFD8DC
+        border-bottom-left-radius: 5px
+        border-bottom-right-radius: 5px
+
+/** banner **/
+
+.banner
+    margin: 10px
+    img
+        +borde-redondeado(5px)
+        width: 100%
+        max-height: 352px
+
+/** tarjeta **/
+
+.tarjeta
+    margin: 10px
+    background-color: #ffffff
+    padding: 10px
+    font-family: $fuente-principal, sans-serif
+    border: 3px solid #CFD8DC
+    +borde-redondeado(5px)
+    img
+        width: $total-porcentaje
+        +borde-redondeado(5px)
+    h1 
+        font-size: 16px
+        color: #0D47A1
+        font-weight: bold
+    p
+        @extend .articulo
+        color: $color-texto-primario
+    a
+        display: block
+        padding: 10px 0 10px 0
+        background-color: $color-primario
+        color: $color-texto-secundario
+        font-weight: bold
+        text-align: center
+        text-decoration: none
+        +borde-redondeado(10px)
+        transition: 0.2s ease-in-out all
+    a:hover
+        background-color: $color-acento
+    
