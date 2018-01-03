@@ -1,13 +1,13 @@
  #!/usr/bin/env perl
 
-$rdmayor; # Radio del circulo mayor.
-$rdmenor; # Radio del circulo menor.
+$radio_circulo_mayor; # Radio del circulo mayor.
+$radiio_circulo_menor; # Radio del circulo menor.
 $totcir; # Total de circulos a evaluar.
 
 mostrar_ventana("Ingrese el radio del circulo mayor: ");
-$rdmayor = readline(STDIN);
+$radio_circulo_mayor = readline(STDIN);
 mostrar_ventana("Ingrese el radio del circulo menor: ");
-$rdmenor = readline(STDIN);
+$radiio_circulo_menor = readline(STDIN);
 mostrar_ventana("Ingrese la cantidad de circulos: ");
 $totcir = readline(STDIN);
 
@@ -29,7 +29,7 @@ for(my $i = 0; $i < $totcir; $i++)
 	$dtotal; # Distancia del centro al diametro.
 	$dcp = sqrt(($posx ** 2) + ($posy ** 2));
 
-	$resultado = evaluar_circulo($rdmayor, $rdmenor,$dcp, $rad);
+	$resultado = evaluar_circulo($radio_circulo_mayor, $radiio_circulo_menor,$dcp, $rad);
 
 	if($resultado)
 	{
@@ -42,31 +42,31 @@ mostrar_ventana("**********");
 mostrar_ventana("Número total de circulos: $totcirok");
 
 sub evaluar_circulo(){
-	my $rdmayor = shift;
-	my $rdmenor = shift;
+	my $radio_circulo_mayor = shift;
+	my $radiio_circulo_menor = shift;
 	my $dishipo = shift;
 	my $rad = shift;
 	my $esdentro = 1;
 
-	$rdmayor = $rdmayor + 0;
-	$rdmenor = $rdmenor + 0;
+	$radio_circulo_mayor = $radio_circulo_mayor + 0;
+	$radiio_circulo_menor = $radiio_circulo_menor + 0;
 	my $dismayor = $dishipo + $rad;
 	my $dismenor = $dishipo - $rad;
 	mostrar_ventana("------------------------------------------------------");
 
-	mostrar_ventana("Distancia máxima: $rdmayor");
-	mostrar_ventana("Distancia mínima: $rdmenor");
+	mostrar_ventana("Distancia máxima: $radio_circulo_mayor");
+	mostrar_ventana("Distancia mínima: $radiio_circulo_menor");
 	mostrar_ventana("Distancia del punto (0,0) al centro del círculo actual: $dishipo");
 	mostrar_ventana("Distancia del punto (0,0) al diámetro más lejano del círculo actual: $dismayor");
 	mostrar_ventana("Distancia del punto (0,0) al diámetro más cercano del círculo actual: $dismenor");
 	
-	if($dismayor > $rdmayor)
+	if($dismayor > $radio_circulo_mayor)
 	{
 		mostrar_ventana("** El círculo sobrepasa los valores del círculo externo.");
 		$esdentro = 0;
 	}
 
-	if($dismenor < $rdmenor)
+	if($dismenor < $radiio_circulo_menor)
 	{
 		mostrar_ventana("** El círculo sobrepasa los valores del circulo interno.");
 		$esdentro = 0;
